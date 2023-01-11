@@ -1,11 +1,9 @@
 # UA
 USER-AGENT,hide*,Mainland
-USER-AGENT,MicroMessenger*,Mainland
 USER-AGENT,TeamViewer*,Mainland
 USER-AGENT,TIM*,Mainland
 USER-AGENT,ting_en,Mainland
 USER-AGENT,WebTorrent*,Mainland
-USER-AGENT,WeChat*,Mainland
 
 # China Bank
 # > Agricultural Bank of China
