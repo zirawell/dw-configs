@@ -1,12 +1,12 @@
+HOST-SUFFIX,qpic.cn,direct
+HOST,sgminorshort.wechat.com,direct
 HOST,dl.wechat.com,WeChat
 HOST,sgfindershort.wechat.com,WeChat
 HOST,sgilinkshort.wechat.com,WeChat
 HOST,sglong.wechat.com,WeChat
-HOST,sgminorshort.wechat.com,WeChat
 HOST,sgshort.wechat.com,WeChat
 HOST,tencentmap.wechat.com,WeChat
 HOST-SUFFIX,qlogo.cn,WeChat
-#HOST-SUFFIX,qpic.cn,WeChat
 HOST-SUFFIX,servicewechat.com,WeChat
 HOST-SUFFIX,tenpay.com,WeChat
 HOST-SUFFIX,wechat.com,WeChat
