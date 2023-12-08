@@ -76,7 +76,7 @@ let $ = nobyda();
 let run = EnvInfo();
 
 async function SwitchRegion(title, url, body) {
-	const Group = $.read('BiliArea_Policy') || '📺 DomesticMedia'; //Your blibli policy group name.
+	const Group = $.read('BiliArea_Policy') || 'CMedia'; //Your blibli policy group name.
 	const CN = $.read('BiliArea_CN') || 'DIRECT'; //Your China sub-policy name.
 	const TW = $.read('BiliArea_TW') || 'TW'; //Your Taiwan sub-policy name.
 	const HK = $.read('BiliArea_HK') || 'HK'; //Your HongKong sub-policy name.
@@ -89,11 +89,11 @@ async function SwitchRegion(title, url, body) {
 		if (/\u6e2f[\u4e00-\u9fa5]+\u5340|%20%E6%B8%AF&/.test(title || url)) {
 			const test = /\u53f0[\u4e00-\u9fa5]+\u5340/.test(title);
 			if (current != HK && (current == TW && test ? 0 : 1))
-				select = { policy: HK, mode: '香港' };
+				select = { policy: HK, mode: 'HK' };
 		} else if (/\u53f0[\u4e00-\u9fa5]+\u5340|%20%E5%8F%B0&/.test(title || url)) {
-			if (current != TW) select = { policy: TW, mode: '台湾' };
+			if (current != TW) select = { policy: TW, mode: 'TW' };
 		} else if (body.code === -404 || chtMatch) {
-			if (current != DF) select = { policy: DF, mode: '后备' };
+			if (current != DF) select = { policy: DF, mode: 'Others' };
 		} else if (current != CN) {
 			select = { policy: CN, mode: '直连' };
 		}
