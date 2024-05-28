@@ -80,7 +80,7 @@ async function SwitchRegion(title, url, body) {
 	const CN = $.read('BiliArea_CN') || 'DIRECT'; //Your China sub-policy name.
 	const TW = $.read('BiliArea_TW') || 'TW'; //Your Taiwan sub-policy name.
 	const HK = $.read('BiliArea_HK') || 'HK'; //Your HongKong sub-policy name.
-	const DF = $.read('BiliArea_DF') || '🏁 sub-policy'; //Sub-policy name used after region is blocked(e.g. url 404)
+	const DF = $.read('BiliArea_DF') || 'Others'; //Sub-policy name used after region is blocked(e.g. url 404)
 	const off = $.read('BiliArea_disabled') || ''; //WiFi blacklist(disable region change), separated by commas.
 	const current = await $.getPolicy(Group);
 	const area = (() => {
@@ -95,7 +95,7 @@ async function SwitchRegion(title, url, body) {
 		} else if (body.code === -404 || chtMatch) {
 			if (current != DF) select = { policy: DF, mode: 'Others' };
 		} else if (current != CN) {
-			select = { policy: CN, mode: '直连' };
+			select = { policy: CN, mode: 'DIRECT' };
 		}
 		if ($.isQuanX && current === 'direct' && select.policy === 'DIRECT') {
 			select = {}; //prevent loopback in some cases
